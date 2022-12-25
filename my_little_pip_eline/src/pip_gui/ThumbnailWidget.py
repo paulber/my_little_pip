@@ -11,8 +11,8 @@ from PyQt6.QtWidgets import (QListWidget, QListWidgetItem)
 from PyQt6.QtCore import QSize
 from PyQt6.QtGui import QIcon, QPixmap
 
-from bin.pip_gui.PreprocessingGraphicItem import PreprocessingGraphicItem
-import bin.pip_db.browse_db as browse_db
+from src.pip_gui.PreprocessingGraphicItem import PreprocessingGraphicItem
+import src.pip_db.browse_db as browse_db
 
 
 class ThumbnailWidget(QListWidget):

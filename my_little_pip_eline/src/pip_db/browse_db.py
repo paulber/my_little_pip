@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import QMessageBox
 def initiate_thumbnail():
 
     database = QSqlDatabase.addDatabase("QSQLITE")  # SQLite version 3
-    database.setDatabaseName("bin/pip_db/functions.db")
+    database.setDatabaseName("src/pip_db/functions.db")
 
     if not database.open():
         print("Unable to open data source file.")
@@ -27,7 +27,7 @@ def initiate_thumbnail():
 def find_import_list_for_gui(gui_name : str):
 
     database = QSqlDatabase.addDatabase("QSQLITE")  # SQLite version 3
-    database.setDatabaseName("bin/pip_db/functions.db")
+    database.setDatabaseName("src/pip_db/functions.db")
 
     if not database.open():
         print("Unable to open data source file.")

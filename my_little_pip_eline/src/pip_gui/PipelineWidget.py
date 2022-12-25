@@ -12,8 +12,8 @@ from PyQt6.QtSql import QSqlQuery
 from PyQt6.QtWidgets import QGraphicsView, QGraphicsScene
 from PyQt6.QtCore import (QModelIndex)
 from PyQt6.QtGui import (QStandardItemModel)
-from bin.pip_gui.PreprocessingGraphicItem import *
-from bin.pip_gui.Connection import *
+from src.pip_gui.PreprocessingGraphicItem import *
+from src.pip_gui.Connection import *
 
 
 class PipelineWidgetScene(QGraphicsScene):

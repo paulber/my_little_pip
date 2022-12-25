@@ -25,9 +25,10 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMessageBox, QMainWindow, QDockWidget, QStatusBar
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QIcon, QAction
-from bin.pip_gui.PipelineWidget import PipelineWidgetView
-from bin.pip_gui.ThumbnailWidget import ThumbnailWidget
+from src.pip_gui.PipelineWidget import PipelineWidgetView
+from src.pip_gui.ThumbnailWidget import ThumbnailWidget
 
+sys.path.append('./src')
 
 class MainWindow(QMainWindow):
 

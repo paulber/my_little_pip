@@ -2,8 +2,8 @@
 from PyQt6.QtWidgets import QGraphicsItem, QMenu
 from PyQt6.QtGui import QPen, QBrush, QColor, QFont, QPainter, QRadialGradient, QContextMenuEvent, QPixmap
 from PyQt6.QtCore import Qt, QRectF, QPoint
-from bin.pip_gui.Connection import ConnectionPoint
-import bin.pip_db.browse_db as browse_db
+from src.pip_gui.Connection import ConnectionPoint
+import src.pip_db.browse_db as browse_db
 
 
 def gui_load_data():

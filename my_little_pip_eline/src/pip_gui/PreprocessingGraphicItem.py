@@ -1,5 +1,5 @@
 
-from bin.pip_gui.PipelineGraphicItem import *
+from src.pip_gui.PipelineGraphicItem import *
 
 
 class PreprocessingGraphicItem(PipelineGraphicItem):

@@ -12,8 +12,6 @@ class ConnectionPoint(QGraphicsEllipseItem):
 
         super().__init__(0, 0, width, width, parent)
 
-        self.type = type
-
         self.type = type_point
         self.parent = parent
         self.moveBy(x - width / 2, y - width / 2)
@@ -79,6 +77,9 @@ class Connection(QGraphicsPathItem):
     def delete_connection(self):
         self.scene().removeItem(self)
 
+    def connection_points(self):
+        return self.start, self.end
+
     def drawing_connection(self, end_connection_point: Union[ConnectionPoint, QPointF]):
 
         if type(end_connection_point) is QPointF:
@@ -134,5 +135,17 @@ class Connection(QGraphicsPathItem):
         if len(path_list) == 2:
             path.lineTo(path_list[1])
         else:
-            self._line.setP2(source.scenePos() + self.offset)
-        self.setLine(self._line)
+            path.lineTo(path_list[1])
+            path.cubicTo(QPointF(path_list[1]), QPointF(path_list[2]), QPointF(path_list[3]))
+            path.lineTo(path_list[4])
+
+        pen = QPen(Qt.GlobalColor.blue, 5, Qt.PenStyle.SolidLine)
+        pen.setCapStyle(Qt.PenCapStyle.RoundCap)
+        self.setPen(pen)
+        self.setPath(path)
+
+        return path
+
+    def __str__(self):
+        return "From str method of Connection: input is %s, " \
+               "output is %s" % (self.start.parent, self.end.parent)
